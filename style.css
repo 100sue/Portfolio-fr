@@ -29,10 +29,45 @@ body {
 }
 
 .toggle.active {
-    background: #000 url("images/close.png");
+    background: #3586ff url("images/close.png");
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat;
+}
+.cursor {
+    z-index: 200;
+    position: fixed;
+    background: #3586ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #3586ff,
+                0 0 60px #3586ff,
+                0 0 100px #3586ff;
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;            
+}
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.cursor:before {
+    content: '';
+    position: absolute;
+    background: #3586ff;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+
 }
 
 section {
@@ -92,7 +127,7 @@ section {
 .banner .contentBx h4 {
     font-size: 1.5em;
     color: #333;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .banner .contentBx h4 span {
@@ -101,11 +136,33 @@ section {
     font-weight: 700;
 }
 
-.banner .contentBx h2 {
-    color: #333;
-    font-size: 3em;
-    line-height: 1em;
+.banner .contentBx h5 {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 700;
 }
+.banner .contentBx h6 {
+    font-size: 1.5em;
+    color:  #3586ff;
+    font-weight: 700;
+}
+.banner .contentBx h2 {
+    font-size: 90px;
+    line-height: 1em;
+    -webkit-text-stroke: 1px #3586ff;
+    background: url(images/back1.png);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
 
 p {
     font-size: 1.1em;
@@ -121,6 +178,17 @@ p {
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 2px;
+}
+.btn2 {
+    background: #3586ff;
+    color: #fff;
+    padding: 7px 20px;
+    display: inline-block;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 10px;
 }
 
 .sideBar {
@@ -388,6 +456,7 @@ p {
 .contact .contactForm .row {
     width: 100%;
     display: flex;
+    gap: 10px;
 }
 .contact .contactForm .row .col50 {
     width: 50%;
@@ -416,7 +485,7 @@ p {
     height: 100px;
 }
 
-.contact .contactForm .row input[type="submit"] {
+.contact .contactForm .row button{
     background: #3586ff;
     color: #fff;
     padding: 10px 30 px;
@@ -426,7 +495,6 @@ p {
     cursor: pointer;
     max-width: 150px;
 }
-
 
 footer {
     position: relative;

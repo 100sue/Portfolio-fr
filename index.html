@@ -12,6 +12,7 @@
 <body>
    
         <div class="toggle" onclick="toggleMenu()"></div>
+        <div class="cursor"></div>
 
 <section class="banner" id="home">
     <div class="imgSidebar">
@@ -20,12 +21,10 @@
     <div class="contentBx" data-center-center="opacity:1;right:0px;" data-0-bottom="opacity:0;right:400px;">
         <h5 class="logoText">Mon Portfolio</h5>
     <div>
-        <h4><span>Bonjour</span>, je me nomme</h4>
+        <h4><span>Bonjour</span>, je suis</h4>
         <h2>Roland APPERT</h2>
-        <h4>Je suis développeur Full Stack .</h4>
-        <p>Autodidacte, passionné de design et de développement Web <br>
-         depuis plus de vingt ans.</p>
-         <a href="https://100sue.github.io/Presentation/" class="btn">About Me</a>
+        <h6>Je suis développeur Full Stack .</h6>
+         <a href="#about" class="btn">About Me</a>
          <a href="https://100sue.github.io/CV/" class="btn">Download CV</a>
     </div>
     <ul class="sci">
@@ -177,6 +176,13 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
             sit amet consectetur adipisicing elit.</p>
     </div>
+    <form  action="https://formsubmit.co/35d34cd8646d78fb18f537bc7919c7e0"  method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display:none;">
+        <!-- Disable Captcha-->
+        <input type="hidden" name="captcha" value="false">
+        <input type="hidden" name="_next" value="https://100sue.github.io/Portfolio/success.html">
+
     <div class="contactForm" data-center-center="opacity:1;right:0px;" data-0-bottom="opacity:0;right:800px;">
         <div class="row">
             <div class="col50">
@@ -199,7 +205,7 @@
         </div>
         <div class="row">
             <div class="col100">
-                <input type="submit" value="envoyez">
+                <button class="btn" type="submit">Envoyez</button>
             </div>
         </div>
     </div>
@@ -251,6 +257,10 @@
 <script type="text/javascript">
       var s = skrollr.init();
 </script>
+<script src="https://unpkg.com/typewriter-effect@2.18.2/dist/core.js"></script>
+<script src="app.js"></script> 
+
+<script src="mouse.js"></script>
 
     
 </body>
